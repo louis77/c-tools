@@ -4,7 +4,7 @@
 
 #include "arena.c"
 
-int test_arena(void) {
+void test_arena(void) {
     printf("Allocating arena of size 1024\n");
     Arena arena = {0};
     if (!Arena_init(&arena, 1024)) {
@@ -44,6 +44,10 @@ int test_arena(void) {
     printf("Deallocating arena again\n");
     Arena_free(&arena);
     assert(arena.data == NULL && "Arena.data should be NULL after free");
+}
+
+int main(void) {
+    test_arena();
 
     return 0;
 }
