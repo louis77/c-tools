@@ -1,2 +1,8 @@
+.DS_Store
 /cmake-build-debug/
 .idea
+*.dSYM
+a.out
+*.o
+main
+tests
